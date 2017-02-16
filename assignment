@@ -1,0 +1,97 @@
+Q1. Explain hadoop in layman's term?
+A1.             
+Hadoop in Layman's Term :It is basically divided into into two on the basis of functioning i.e.
+                          1. storage:HDFS
+                          2. processing:MapReduce
+                                        mapreduce is a model based on pig and hive where pig is like data base interface and hive is like
+                                        MYSQL interface.
+HDFS:
+The Hadoop Distributed File System (HDFS) is a distributed file system designed to run on commodity hardware.
+It has many similarities with existing distributed file systems. However, the differences from other distributed file systems
+are significant. HDFS is highly fault-tolerant and is designed to be deployed on low-cost hardware. HDFS provides high throughput
+access to application data and is suitable for applications that have large data sets. HDFS relaxes a few POSIX requirements to enable
+streaming access to file system data. HDFS was originally built as infrastructure for the Apache Nutch web search engine project. HDFS
+is now an Apache Hadoop subproject.
+MAP REDUCE:
+Hadoop MapReduce is a software framework for easily writing applications which process vast amounts of data (multi-terabyte data-sets)
+in-parallel on large clusters (thousands of nodes) of commodity hardware in a reliable, fault-tolerant manner.
+A MapReduce job usually splits the input data-set into independent chunks which are processed by the map tasks in a completely 
+parallel manner. The framework sorts the outputs of the maps, which are then input to the reduce tasks. Typically both the input and
+the output of the job are stored in a file-system. The framework takes care of scheduling tasks, monitoring them and re-executes the 
+failed tasks.
+
+Q2.Explain the components of Hadoop framework?
+A2.The 3 core components of  Hadoop framework are:
+1. MapReduce – A software programming model for processing large sets of data in parallel
+2. HDFS – The Java-based distributed file system that can store all kinds of data without prior organization.
+3. YARN – A resource management framework for scheduling and handling resource requests from distributed applications.
+
+HDFS:
+
+The Hadoop Distributed File System (HDFS) is a distributed file system designed to run on commodity hardware.
+It has many similarities with existing distributed file systems. However, the differences from other distributed file systems
+are significant. HDFS is highly fault-tolerant and is designed to be deployed on low-cost hardware. HDFS provides high throughput
+access to application data and is suitable for applications that have large data sets. HDFS relaxes a few POSIX requirements to enable
+streaming access to file system data. HDFS was originally built as infrastructure for the Apache Nutch web search engine project. HDFS
+is now an Apache Hadoop subproject.
+
+MAP REDUCE:
+
+Hadoop MapReduce is a software framework for easily writing applications which process vast amounts of data (multi-terabyte data-sets)
+in-parallel on large clusters (thousands of nodes) of commodity hardware in a reliable, fault-tolerant manner.
+A MapReduce job usually splits the input data-set into independent chunks which are processed by the map tasks in a completely 
+parallel manner. The framework sorts the outputs of the maps, which are then input to the reduce tasks. Typically both the input and
+the output of the job are stored in a file-system. The framework takes care of scheduling tasks, monitoring them and re-executes the 
+failed tasks.
+Typically the compute nodes and the storage nodes are the same, that is, the MapReduce framework and the Hadoop Distributed File System
+(see HDFS Architecture Guide) are running on the same set of nodes. This configuration allows the framework to effectively schedule tasks
+on the nodes where data is already present, resulting in very high aggregate bandwidth across the cluster.
+The MapReduce framework consists of a single master JobTracker and one slave TaskTracker per cluster-node. The master is responsible
+for scheduling the jobs' component tasks on the slaves, monitoring them and re-executing the failed tasks. The slaves execute the tasks
+as directed by the master.
+Minimally, applications specify the input/output locations and supply map and reduce functions via implementations of appropriate
+interfaces and/or abstract-classes. These, and other job parameters, comprise the job configuration. The Hadoop job client then submits
+the job (jar/executable etc.) and configuration to the JobTracker which then assumes the responsibility of distributing the software/
+configuration to the slaves, scheduling tasks and monitoring them, providing status and diagnostic information to the job-client.
+
+YARN:
+
+The fundamental idea of YARN is to split up the functionalities of resource management and job scheduling/monitoring into
+separate daemons. The idea is to have a global ResourceManager (RM) and per-application ApplicationMaster (AM). An application
+is either a single job or a DAG of jobs.
+The ResourceManager and the NodeManager form the data-computation framework. The ResourceManager is the ultimate authority
+that arbitrates resources among all the applications in the system. The NodeManager is the per-machine framework agent who is
+responsible for containers, monitoring their resource usage (cpu, memory, disk, network) and reporting the same to the Resource
+Manager/Scheduler.
+The per-application ApplicationMaster is, in effect, a framework specific library and is tasked with negotiating resources from the
+ResourceManager and working with the NodeManager(s) to execute and monitor the tasks.
+
+Q3. Eplain the reasons to learn Big data technologies?
+A3.
+1. Find New Business Opportunities:
+Big Data is used in retail, where insights are gained on customer interests by capturing information on the websites they
+browse and what their online purchases are. For example, if you have browsed for books on Android yesterday, today, when you open
+your favorite online bookstore, it shows you various books based on Android technology.
+
+2. To Connect with Customers Using Their Own Data:
+Today the awareness on health issues is at its peak. Making better lifestyle choices to boost health is not the prerogative
+of only the wealthy. This in turn has created a huge market for fitness equipment and many health products. Devices that assimilate
+personal data like Nike+ Fuel, FitBit, and Jawbones UP are handy and helpful in keeping track of vital parameters. These products give
+you more data about yourself than you know. For example, there is a product MyFitnessPal, which will not only give the calories consumed
+but also the breakdown of proteins, fat, and carbs. This is heaven sent data not only for athletes but for people with diabetes also.
+So, it is clear that Companies in Healthcare and Fitness are directly reaching out to customers with intensely useful devices which
+provide personal data. In order to cater to this genre of customers, and to keep their interest intact, these companies gather, analyze
+millions of records of personal data – again using Big Data technology!
+
+3. To Promote Right Products to the Customers
+
+Companies need to have the capacity to predict what customers want even before they ask for it. They can do this only through
+the data collected on their customers. Data is not relegated to what the customer does at their website but other websites too.
+
+4. Identify and Resolve Customer Pain Points
+
+ A good example is the concern of lost baggage by air passengers. One Airline (Delta) has come up with an App which requires
+ you to take a snap of your baggage tag using the “Track my baggage” feature. Even if the baggage doesn’t reach its intended
+ destination, this App saves a lot of time in tracking it down. One can imagine the number of air passengers who would use this
+ data and in the number of geographical locations across the globe – this App surely generates millions of baggage data records on
+ a daily basis-rather on a 24/7 basis.
